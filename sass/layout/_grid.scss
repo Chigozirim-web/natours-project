@@ -1,0 +1,75 @@
+.about-row, .footer-row {
+    max-width: $grid-width;
+    display: grid;
+    grid-template-columns: repeat(2, calc((100% - #{$gutter-horizontal}) / 2));
+    justify-content: center;
+
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    [class^="col-"] {
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+    }
+
+    .col-1-of-2 {
+        //width: calc((100% - #{$gutter-horizontal}) / 2);
+    }
+}
+
+.features-row {
+    max-width: $grid-width;
+    display: grid;
+    grid-template-columns: repeat(4, calc((100% - #{$gutter-horizontal}) / 4));
+    //column-gap: $gutter-horizontal;
+    justify-content: center;
+    justify-items: center;
+
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    [class^="col-"] {
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+    }
+
+    .col-1-of-4 {
+    }
+}
+
+.tours-row {
+    max-width: $grid-width;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    justify-items: center;
+
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    [class^="col-"] {
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+    }
+
+    .col-1-of-3 {
+        width: 36rem;
+    }
+}
+
+// 'cause these classes only have 1 child
+.stories-row, .booking-row {
+    max-width: $grid-width; 
+    margin: 0 auto;
+
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+}
